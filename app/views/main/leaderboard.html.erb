@@ -1,0 +1,120 @@
+<div class="head-wrapper">
+<table style="margin-left: 0px;margin-top: 10px;position: absolute;">
+  <tr>
+    <td><b><ul class="sf-menu">
+                    <li><%= @user.name %></a>
+    		 	<ul>
+			    <a href="/forms/registration" class="button" style="height:2px;background:#fff;">Control Panel</a>
+			    <a href="/home/logout" class="button" style="height:2px;background:#fff;">Logout</a>
+			</ul>   
+		    </li>		
+                </ul>
+	</b>
+  </tr>
+  <tr>
+    <td><%= @user.department %></td>
+    <td> </td><td>&#09</td>
+    <td>Available Credits: <b><%= @user.avail_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+    <td>Received Credits: <b><%= @user.received_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+    <td>Given Credits: <b><%= @user.given_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+  </tr>
+</table>
+</div>
+<div class="right-wrapper">
+<p>
+  <% @cout.each do |h| %>
+    <b><%= h.name %></b>: <%= h.reason %> <a href="#">#<%= h.department %></a> 
+    <% if h.priority == "Urgent" %> <%= image_tag "hot_fire.gif", :size => "20x20", :alt => "Priority: Urgent" %>
+    <% end %><br>
+  <% end %>
+</p>
+</div><div class="left-wrapper">
+<a href="/main/profile" class="button">Profile</a>
+<a href="/help/request_help" class="button">Request Help</a>
+<a href="/main/send_chips" class="button">Send Credits</a>
+<a href="/main/leaderboard" class="button">Leaderboard</a>
+<a href="/users/users_list" class="button">Users</a>
+<% if @user %>
+  <% if @user.role == "Admin" || @user.role == "admin" %>
+    <a href="/forms/invitation" class="button">Invite User</a>
+  <%end%>
+<%end%>
+            	
+</div>
+<div class="center-wrapper">
+<p align="justify">
+<% counter = 0 %>
+<table border="1" align="center" width="400">
+  <center><b>Top Users on Received Credits</b></center>
+  <td align="center"><b> Position </b></td> <td align="center"><b> Name </b></td> <td align="center"><b> Received Credits </b></td>
+  <% @top_rec.each do |t| %>
+    <tr>
+      <% counter+=1 %>
+      <% if counter == 1 %>
+	<td align="center"><%= image_tag "gold.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.received_chips %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% elsif counter == 2 %>
+	<td align="center"><%= image_tag "silver.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.received_chips %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% elsif counter == 3 %>
+	<td align="center"><%= image_tag "bronze.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.received_chips %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% end %>
+    </tr>
+  <% end %>
+    <tr>
+      <td colspan = "3"><center>Your Position</td>
+    </tr>
+    <tr>
+     <td align="center"><%= @c1 %></td> <td align="center"><%= @user.name %></td> <td align="center"><%= @user.received_chips %><%= image_tag "coins.png", :size => "20x20"%></td>
+    </tr>
+</table>
+<br><br>
+<% counter = 0 %>
+<table border="1" align="center" width="400">
+  <center><b>Top Users on Given Credits</b></center>
+  <td align="center"><b> Position </b></td> <td align="center"><b> Name </b></td> <td align="center"><b> Given Credits </b></td>
+  <% @top_sent.each do |t| %>
+    <tr>
+      <% counter+=1 %>
+      <% if counter == 1 %>
+	<td align="center"><%= image_tag "gold.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.given_chips %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% elsif counter == 2 %>
+	<td align="center"><%= image_tag "silver.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.given_chips %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% elsif counter == 3 %>
+	<td align="center"><%= image_tag "bronze.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.given_chips %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% end %>
+    </tr>
+  <% end %>
+    <tr>
+      <td colspan = "3"><center>Your Position</td>
+    </tr>
+    <tr>
+     <td align="center"><%= @c2 %></td> <td align="center"><%= @user.name %></td> <td align="center"><%= @user.given_chips %><%= image_tag "coins.png", :size => "20x20"%></td>
+    </tr>
+</table>
+
+<br><br>
+<% counter = 0 %>
+<table border="1" align="center" width="400">
+  <center><b>Top Users on Received + Given Credits</b></center>
+  <td align="center"><b> Position </b></td> <td align="center"><b> Name </b></td> <td align="center"><b> Received + Given Credits </b></td>
+  <% @new.each do |t| %>
+    <tr>
+      <% counter+=1 %>
+      <% if counter == 1 %>
+	<td align="center"><%= image_tag "gold.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.sum_credits %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% elsif counter == 2 %>
+	<td align="center"><%= image_tag "silver.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.sum_credits %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% elsif counter == 3 %>
+	<td align="center"><%= image_tag "bronze.gif", :size => "50x50", :alt => "1st" %></td> <td align="center"><%= t.name %></td> <td align="center"><%= t.sum_credits %><%= image_tag "coins.png", :size => "20x20"%> </td>
+      <% end %>
+    </tr>
+  <% end %>
+    <tr>
+      <td colspan = "3"><center>Your Position</td>
+    </tr>
+    <tr>
+     <td align="center"><%= @c2 %></td> <td align="center"><%= @user.name %></td> <td align="center"><%= @my_sum %><%= image_tag "coins.png", :size => "20x20"%></td>
+    </tr>
+</table>
+
+</p>
+</div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Innovation Credits</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+    <link rel="canonical" href="http://localhost:3000/main/profile" />
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    </script>
+
+</head>
+<body>
+<div class="main-wrapper">
+<div class="color-line"></div>
+<div id="wrapper">
+
+
+<%= yield %>
+</div></div></div>
+<div class="footer-line-wrapper">
+
+<p style="font-family:arial;color:#d3414a;font-size:20px;margin-left: 20px;">eWallet DevTeam<br>UCD 2013<br>Practicum Project</p>
+<center>
+<div class="to_r">
+<!-- Place this tag where you want the widget to render. -->
+<div class="g-page" data-width="100" data-height="20" data-href="https://plus.google.com/116074677533210008299" data-theme="dark" data-showtagline="false" data-rel="publisher"></div>
+<!-- Place this tag after the last widget tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+ </p>
+</div>
+</div>
+</body>
+</html>

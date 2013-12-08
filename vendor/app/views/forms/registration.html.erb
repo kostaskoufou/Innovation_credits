@@ -1,0 +1,32 @@
+<center><h1>Control Panel</h1>
+<br><br>
+<div class="left-wrapper" style="margin-top:0px"> 
+<a href="/main/profile" class="button">Profile</a>
+<a href="/help/request_help" class="button">Request Help</a>
+<a href="/main/send_chips" class="button">Send Credits</a>
+<a href="/main/leaderboard" class="button">Leaderboard</a>
+<a href="/users/users_list" class="button">Users</a>
+<% if @user %>
+  <% if @user.role == "Admin" || @user.role == "admin" %>
+    <a href="/forms/invitation" class="button">Invite User</a>
+  <%end%>
+<%end%>
+</div>
+<%= form_tag('registration', :method => 'post', :multipart => true) do %>
+<table>  
+  <tr>
+  <td>New password</td>
+  <td><%= password_field_tag 'password' %></td>
+  </tr><tr>
+  <td>Full name</td>
+  <td><%= text_field_tag 'name' %></td>
+  </tr>
+  <tr><td><%= submit_tag("Submit") %></td></tr>
+</table>
+<% end %>
+
+<% if @file_name && @name %>
+  <%= @temp %>
+  <%= @file_name %>
+<%end%>
+<br><br><br><br><br><br>

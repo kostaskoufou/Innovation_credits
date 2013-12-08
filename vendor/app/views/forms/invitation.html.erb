@@ -1,0 +1,42 @@
+<center><h1>Invitation</h1><br><br>
+<div class="left-wrapper" style="margin-top:5px"> 
+<a href="/main/profile" class="button">Profile</a>
+<a href="/help/request_help" class="button">Request Help</a>
+<a href="/main/send_chips" class="button">Send Credits</a>
+<a href="/main/leaderboard" class="button">Leaderboard</a>
+<a href="/users/users_list" class="button">Users</a>
+<% if @user %>
+  <% if @user.role == "Admin" || @user.role == "admin" %>
+    <a href="/forms/invitation" class="button">Invite User</a>
+  <%end%>
+<%end%>
+</div>
+<%= form_tag('invitation', :method => 'post') do %>
+<table>  
+  <tr>
+  <td>email</td>
+  <td><%= text_field_tag 'email' %></td>
+  </tr><tr>
+  <td>password</td>
+  <td><%= password_field_tag 'password' %></td>
+  </tr><tr>
+  <td>Department</td>
+  <td><%= select_tag 'department', options_for_select(@deps) %>
+  </tr>
+  <td>Role</td>
+  <td><%= select_tag 'role', options_for_select(@roles) %>
+  </tr>
+  <tr><td><%= submit_tag("Create User") %></td></tr>
+</table>
+<% end %>
+
+<% if @flag == 1 %>
+  <% if params[:email] && params[:password] then %>
+    
+   <b><%= @msg.email %> has created!</b>
+  <% end %>
+<% elsif @flag == 0 || @flag == 2 || @flag == 3 %>
+  <b><%= @msg %></b>
+<% else %>
+  <b> Uknown error, please try again!</b>
+<% end %>

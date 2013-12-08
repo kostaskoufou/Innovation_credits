@@ -1,0 +1,101 @@
+<div class="head-wrapper">
+<table style="margin-left: 0px;margin-top: 10px;position: absolute;">
+  <tr>
+    <td><b><ul class="sf-menu">
+                    <li><%= @user.name %></a>
+    		 	<ul>
+			    <a href="/forms/registration" class="button" style="height:2px;background:#fff;">Control Panel</a>
+			    <a href="/home/logout" class="button" style="height:2px;background:#fff;">Logout</a>
+			</ul>   
+		    </li>		
+                </ul>
+	</b>
+  </tr>
+  <tr>
+    <td><%= @user.department %></td>
+    <td> </td><td>&#09</td>
+    <td>Available Credits: <b><%= @user.avail_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+    <td>Received Credits: <b><%= @user.received_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+    <td>Given Credits: <b><%= @user.given_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+  </tr>
+</table>
+</div>
+<div class="right-wrapper">
+<p>
+  <% @hout.each do |h| %>
+    <b><%= h.name %></b>: <%= h.reason %> <a href="#">#<%= h.department %></a> 
+    <% if h.priority == "Urgent" %> <%= image_tag "hot_fire.gif", :size => "20x20", :alt => "Priority: Urgent" %>
+    <% end %><br>
+  <% end %>
+</p>
+</div><div class="left-wrapper">
+<a href="/main/profile" class="button">Profile</a>
+<a href="/help/request_help" class="button">Request Help</a>
+<a href="/main/send_chips" class="button">Send Credits</a>
+<a href="/main/leaderboard" class="button">Leaderboard</a>
+<a href="/users/users_list" class="button">Users</a>
+<% if @user %>
+  <% if @user.role == "Admin" || @user.role == "admin" %>
+    <a href="/forms/invitation" class="button">Invite User</a>
+  <%end%>
+<%end%>
+            	
+</div>
+<div class="center-wrapper">
+<p align="justify">
+<center><h3>Send Credits</h3><br>
+<%= form_tag({ :controller => 'main', :action => 'send_chips' }, { :method => 'post'}) do %>
+<table>  
+  <tr>
+  <td>Search user by name</td>
+  <td><%= text_field_tag 'search' %></td>
+  <td><%= submit_tag("Search") %></td></tr>
+</table>
+<% end %>
+
+<% if @cout && @tmp && @cout!=[] && @tmp!=[]%>
+  <%= form_tag({ :controller => 'main', :action => 'send_chips' }, { :method => 'post'}) do %>
+    <table>  
+      <tr>
+      <td>Select user:</td>
+      </tr>
+      <% @cout.each do |c| %>
+	<tr>
+	  <td><%= radio_button_tag(:usr, c.id) %></td>
+	  <td><%= label_tag(:usr_id, c.name) %></td>
+	</tr>
+      <% end %>
+      <tr>
+	<td>Select Credits:</td>
+      </tr>
+      <tr>
+	 <td><%= radio_button_tag(:chips, 5) %></td>
+	 <td><%= label_tag(:chips_id, 5) %></td>
+      </tr>
+      <tr>
+	 <td><%= radio_button_tag(:chips, 10) %></td>
+	 <td><%= label_tag(:chips_id, 10) %></td>
+      </tr>
+      <tr>
+	 <td><%= radio_button_tag(:chips, 15) %></td>
+	 <td><%= label_tag(:chips_id, 15) %></td>
+      </tr>
+      <tr>
+	 <td>Reason:</td>
+	 <td><%= text_field_tag 'reason' %></td>
+      </tr>
+      <tr><td><%= submit_tag("Send Credits") %></td></tr>
+    </table>
+  <% end %>
+<%end%>
+
+<%if @msg %>
+<%= @msg %>
+<% end %>
+<%if @tran %>
+	<% @to_name = Users.find_by_id(@usr) %>
+	<br> <%= @nm %> to <%= @to_name.name %> because <%= @tran.comment %>
+<% end %>
+</p>
+</div>
+

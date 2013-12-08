@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+	background-color:#f1f2f1;
+	text-shadow: none;
+	color:black;
+	font-size:18px;
+	line-height:1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.main-wrapper {
+	width: 1030px;
+	height: 800px;
+	margin: 0 auto;
+	background:#fff;
+	margin-top:20px;
+	box-shadow: 0px 0px 10px #aaa;
+}
+
+#wrapper {
+	width: 1030px;
+	height: 800px;
+	margin: 0 auto;
+	background:#fff;
+	margin-top:20px;
+	box-shadow: 0px 0px 10px #aaa;
+}
+
+
+
+.color-line { 
+	width:1030px; 
+	height:10px; 
+	float:left; 
+	background:#04bfea
+
+}
+
+.to_r {
+	margin-top: -100px;
+	margin-right: -650px;
+}
+
+.footer-line-wrapper {
+	background:#000; 
+	width:1030px; 
+	margin:0 auto; 
+	border-top:1px solid #ececec; 
+	margin-bottom:20px !important; 
+}
+
+.footer-line-wrapper {
+	background:#000; 
+	width:1030px; 
+	margin:0 auto; 
+	border-top:1px solid #ececec; 
+	margin-bottom:20px !important; 
+}

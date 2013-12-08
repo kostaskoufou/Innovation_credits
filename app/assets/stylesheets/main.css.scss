@@ -1,0 +1,178 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.head-wrapper {
+	width: 1030px;
+	height: 80px;
+	margin: 0 auto;
+	background:#fff;
+	margin-top: auto;
+	margin-left: 0px;
+	box-shadow: 0px 0px 10px #aaa;
+}
+.right-wrapper {
+	width: 300px;
+	height: 700px;
+	margin: 0 auto;
+	background:grey;
+	margin-right: 0px;
+	margin-top: 5px;
+	box-shadow: 0px 0px 10px #aaa;
+	float: right;
+	word-wrap: break-word;
+	overflow:auto;
+}
+.left-wrapper {
+	width: 150px;
+	margin: 0 auto;
+	background:#fff;
+	margin-right: 880px;
+	margin-top: 5px;
+	box-shadow: 0px 0px 10px #aaa;
+	float: right;
+}
+.center-wrapper {
+	width: 550px;
+	height: 700px;
+	margin: 0 auto;
+	background:#fff;
+	margin-right: 315px;
+	margin-top: -700px;
+	box-shadow: 0px 0px 10px #aaa;
+	float: right;
+	word-wrap: break-word;
+	overflow:auto;
+}
+
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	width: 110px;
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	z-index:9499;
+}
+.sf-menu {
+	line-height: 1.0;
+}
+.sf-menu ul {
+	position: absolute;
+	top: -999em;
+	width: 10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width: 158px;
+}
+.sf-menu li:hover {
+	visibility:	inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float: left;
+	position: relative;
+}
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left: 0;
+	top: 1em; /* match top ul list item height */
+	y-index: 99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top: -999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left: 10em; /* match ul width */
+	top: 0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top: -999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left: 10em; /* match ul width */
+	top: 0;
+}
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	float: right;
+	margin-bottom: 1em;
+}
+.sf-menu a {
+	padding: 1em 1.2em;
+	text-decoration:none;
+	
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color: #33333;
+}
+.sf-menu li li {
+
+	color:#fff;
+	font-size:10px;
+	border-bottom:1px solid #333;
+	top:10px;
+	font-family:verdana;
+	text-transform:none;
+}
+.sf-menu li li li {
+
+	left:58px;
+	border-bottom:1px solid #333;
+	top:0px;
+}
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active, .active a{
+
+	background-image:url('../images/grad1.png');
+	outline: 0;
+	color:#000000;
+	text-shadow:none !important;
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+	padding-right: 30px;
+	min-width: 1px; /* trigger IE7 hasLayout so spans position accurately */
+}

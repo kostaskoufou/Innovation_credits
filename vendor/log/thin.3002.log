@@ -1,0 +1,233 @@
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3002, CTRL+C to stop
+>> Exiting!
+/var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+	from /var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_server'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/backends/tcp_server.rb:16:in `connect'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/backends/base.rb:55:in `block in start'
+	from /var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `call'
+	from /var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	from /var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:86:in `start'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:19:in `load'
+	from /usr/local/bin/thin:19:in `<main>'
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3002, CTRL+C to stop
+>> Exiting!
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3002, CTRL+C to stop
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:34: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:34: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:34: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:34: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+>> Exiting!
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Exiting!
+/var/www/ok_credits_test/config/environment.rb:7:in `<top (required)>': undefined local variable or method `config' for main:Object (NameError)
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /var/www/ok_credits_test/config.ru:3:in `block in <main>'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+	from /var/www/ok_credits_test/config.ru:1:in `new'
+	from /var/www/ok_credits_test/config.ru:1:in `<main>'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:169:in `load_adapter'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:73:in `start'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:19:in `load'
+	from /usr/local/bin/thin:19:in `<main>'
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Exiting!
+/var/www/ok_credits_test/config/environment.rb:7:in `<top (required)>': undefined local variable or method `config' for main:Object (NameError)
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /var/www/ok_credits_test/config.ru:3:in `block in <main>'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+	from /var/www/ok_credits_test/config.ru:1:in `new'
+	from /var/www/ok_credits_test/config.ru:1:in `<main>'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:169:in `load_adapter'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:73:in `start'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:19:in `load'
+	from /usr/local/bin/thin:19:in `<main>'
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Exiting!
+/var/www/ok_credits_test/config/environment.rb:7:in `<top (required)>': undefined local variable or method `config' for main:Object (NameError)
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /var/www/ok_credits_test/config.ru:3:in `block in <main>'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+	from /var/www/ok_credits_test/config.ru:1:in `new'
+	from /var/www/ok_credits_test/config.ru:1:in `<main>'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:169:in `load_adapter'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:73:in `start'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:19:in `load'
+	from /usr/local/bin/thin:19:in `<main>'
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Exiting!
+/var/www/ok_credits_test/config/environment.rb:7:in `<top (required)>': undefined local variable or method `config' for main:Object (NameError)
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /var/www/ok_credits_test/config.ru:3:in `block in <main>'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+	from /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+	from /var/www/ok_credits_test/config.ru:1:in `new'
+	from /var/www/ok_credits_test/config.ru:1:in `<main>'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:169:in `load_adapter'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/controllers/controller.rb:73:in `start'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+	from /var/lib/gems/1.9.1/gems/thin-1.5.1/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:19:in `load'
+	from /usr/local/bin/thin:19:in `<main>'
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3002, CTRL+C to stop
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:28: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:36: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:28: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:36: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+>> Exiting!
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3002, CTRL+C to stop
+/var/www/ok_credits_test/app/controllers/forms_controller.rb:26: warning: character class has '-' without escape: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+>> Exiting!
+>> Writing PID to tmp/pids/thin.3002.pid
+>> Using rack adapter
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3002, CTRL+C to stop

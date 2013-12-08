@@ -1,0 +1,20 @@
+<center><h1>Welcome to Innovation Credits</h1>
+<br><br><%= form_tag({ :controller => 'home', :action => 'login' }, { :method => 'post'}) do %>
+<table>  
+<center>Please login</center>
+  <tr>
+  <td>email</td>
+  <td><%= text_field_tag 'email' %></td>
+  </tr><tr>
+  <td>password</td>
+  <td><%= password_field_tag 'password' %></td>
+  </tr>
+  <tr><td><%= submit_tag("log in") %></td><td><%= link_to "Lost Password..", :controller => "home", :action => "lost_password" %></td></tr>
+</table>
+<% end %>
+
+<% if @msg  %>
+  <%= @msg %> 
+<%end%>
+</center>
+<center> <%= image_tag("welcome.gif", :alt =>"welcome")%>

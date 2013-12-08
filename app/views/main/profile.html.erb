@@ -1,0 +1,63 @@
+<div class="head-wrapper"><p style="margin-left:0px;">
+<table style="margin-left: 0px;margin-top: 10px;position: absolute;">
+  <tr>
+    <td><b><ul class="sf-menu">
+                    <li><%= @user.name %></a>
+    		 	<ul>
+			    <a href="/forms/registration" class="button" style="height:2px;background:#fff;">Control Panel</a>
+			    <a href="/home/logout" class="button" style="height:2px;background:#fff;">Logout</a>
+			</ul>   
+		    </li>		
+                </ul>
+	</b>
+  </tr>
+  <tr>
+    <td><%= @user.department %></td>
+    <td> </td><td>&#09</td>
+    <td>Available Credits: <b><%= @user.avail_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+    <td>Received Credits: <b><%= @user.received_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+    <td>Given Credits: <b><%= @user.given_chips %></b><%= image_tag "coins.png", :size => "20x20"%></td>
+    <td align="right" colspan="3"></td>
+  </tr>
+</table></p>
+</div>
+<div class="right-wrapper">
+<p>
+  <% @cout.each do |h| %>
+    <b><%= h.name %></b>: <%= h.reason %> <a href="#">#<%= h.department %></a> 
+    <% if h.priority == "Urgent" %> <%= image_tag "hot_fire.gif", :size => "20x20", :alt => "Priority: Urgent" %>
+    <% end %><br>
+  <% end %>
+</p>
+</div><div class="left-wrapper">
+<a href="/main/profile" class="button">Profile</a>
+<a href="/help/request_help" class="button">Request Help</a>
+<a href="/main/send_chips" class="button">Send Credits</a>
+<a href="/main/leaderboard" class="button">Leaderboard</a>
+<a href="/users/users_list" class="button">Users</a>
+<% if @user %>
+  <% if @user.role == "Admin" || @user.role == "admin" %>
+    <a href="/forms/invitation" class="button">Invite User</a>
+  <%end%>
+<%end%>
+        
+</div>
+<div class="center-wrapper">
+<p align="justify">
+<div align="right"><g:plusone></g:plusone></div>
+  <h3>Received History</h3>
+  <% if @pout != nil && @pout != [] && @pout %>
+  <% @pout.each do |h| %>
+      <% @tmp1 = Users.find_by_id(h.from) %>
+    <i><b><%= h.created_at.to_formatted_s(:long) %>:</b></i> Great news! <b><%= @tmp1.name %></b> has awarded you <b><%= h.chips %></b> <%= image_tag "coins.png", :size => "20x20"%> for your awesome help with <b><%= h.comment %></b> <br>
+  <% end %>
+  <% end %><br>
+  <h3>Sent History</h3>
+  <% if @pout2 != nil && @pout2 != [] && @pout2 %>
+  <% @pout2.each do |h| %>
+    <% @tmp2 = Users.find_by_id(h.to) %>
+    <i><b><%= h.created_at.to_formatted_s(:long) %>:</b></i> You have sent to <b><%= @tmp2.name  %> <%= h.chips %></b> <%= image_tag "coins.png", :size => "20x20"%> for his help with <b><%= h.comment %></b> <br>
+  <% end %>
+  <% end %>
+</p>
+</div>
